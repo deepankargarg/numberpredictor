@@ -1,19 +1,19 @@
 from datasets import load_dataset
 
+global mnist
 
 def main():
-    # Download IMDb, or reuse it if it is already cached.
-    imdb = load_dataset("stanfordnlp/imdb", token=False)
+    # Download MNIST, or reuse it if it is already cached.
+    mnist = load_dataset("ylecun/mnist")
 
-    print("IMDb is ready!")
-    print(imdb)
+    print("MNIST is ready!")
+    print(mnist)
 
-    # Show the local files backing each split.
-    for split_name, split in imdb.items():
-        print(f"\n{split_name}: {len(split):,} examples")
-        for cache_file in split.cache_files:
-            print(f"  {cache_file['filename']}")
+    return mnist
 
+def get_dataset():
+    x = main()
+    return x["train"], x["test"]
 
 if __name__ == "__main__":
     main()
