@@ -13,6 +13,7 @@ def main():
 
 def get_dataset():
     x = main()
+    print("Dataset is ready!")
     return x["train"], x["test"]
 
 if __name__ == "__main__":

@@ -9,8 +9,4 @@ def to_1D_array(data):
     Returns:
     list: The converted 1D array.
     """
-    # ls = []
-    # for sublist in data:
-    #     for item in sublist:
-    #         ls.append(item)
-    return [item for sublist in data for item in sublist]
+    return [(item/255) for sublist in data for item in sublist]
