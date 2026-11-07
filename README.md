@@ -23,3 +23,6 @@ Machine Learning Model:
 --> Which layer talks to the input
 --> Which layer gives the output
 
+Make two layers of the CNN:
+--> Input layer has 24*24 neurons
+--> Output layer has 9 neurons

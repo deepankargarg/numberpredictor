@@ -2,6 +2,7 @@ from installing_dataset import get_dataset
 import converting_to_1Darray
 from PIL import Image
 import numpy as np
+import matplotlib.pyplot as plt
 
 def parse_data() -> tuple:
     train_dataset, test_dataset = get_dataset()
@@ -24,10 +25,10 @@ def parse_data() -> tuple:
         image = converting_to_1Darray.to_1D_array(image)
         test_data.append((image, label))
 
+    print("Data parsing completed successfully.")
     return train_data, test_data
 
 if __name__ == "__main__":
     train_data, test_data = parse_data()
-    print("Data parsing completed successfully.")
     print(train_data[0])
     print(test_data[0])
